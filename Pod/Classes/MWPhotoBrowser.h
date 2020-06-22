@@ -10,6 +10,7 @@
 #import "MWPhoto.h"
 #import "MWPhotoProtocol.h"
 #import "MWCaptionView.h"
+#import <AVKit/AVKit.h>
 
 // Debug Logging
 #if 0 // Set to 1 to enable debug logging
@@ -17,6 +18,8 @@
 #else
 #define MWLog(x, ...)
 #endif
+
+NSString *const AVPlayerViewControllerDIDFinishNotification;
 
 @class MWPhotoBrowser;
 
@@ -38,7 +41,7 @@
 
 @end
 
-@interface MWPhotoBrowser : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate>
+@interface MWPhotoBrowser : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate,AVPlayerViewControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet id<MWPhotoBrowserDelegate> delegate;
 @property (nonatomic) BOOL zoomPhotosToFill;
