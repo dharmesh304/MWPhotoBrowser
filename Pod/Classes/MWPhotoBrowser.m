@@ -1248,7 +1248,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     _currentVideoPlayerViewController = [[AVPlayerViewController alloc] init];
     _currentVideoPlayerViewController.player = player;
     [player play];
-    _currentVideoPlayerViewController.delegate = self;
     
     //_currentVideoPlayerViewController.moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
     _currentVideoPlayerViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
